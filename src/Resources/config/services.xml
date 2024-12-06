@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+<!--Flow Action -->
+        <service id="Ihor\Flow\Core\Content\Flow\Dispatching\Action\CreateTagAction">
+            <argument type="service" id="tag.repository" />
+            <tag name="flow.action" priority="600" key="action.create.tag"/>
+        </service>
+    </services>
+</container>
