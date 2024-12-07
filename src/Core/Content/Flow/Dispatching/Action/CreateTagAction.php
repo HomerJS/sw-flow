@@ -6,6 +6,8 @@ use Ihor\Flow\Core\Framework\Event\TagAware;
 use Shopware\Core\Content\Flow\Dispatching\Action\FlowAction;
 use Shopware\Core\Content\Flow\Dispatching\StorableFlow;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepository;
+use Shopware\Core\Framework\Event\CustomerAware;
+use Shopware\Core\Framework\Event\OrderAware;
 use Shopware\Core\Framework\Uuid\Uuid;
 
 class CreateTagAction extends FlowAction
@@ -22,7 +24,9 @@ class CreateTagAction extends FlowAction
 
     public function requirements(): array
     {
-        return [TagAware::class];
+        return []; //all events
+//        return [OrderAware::class, CustomerAware::class]; //events for order and customer
+//        return [TagAware::class]; //custom event
     }
 
     public function handleFlow(StorableFlow $flow): void

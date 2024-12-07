@@ -5,11 +5,16 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-
-<!--Flow Action -->
+<!--        Flow action-->
         <service id="Ihor\Flow\Core\Content\Flow\Dispatching\Action\CreateTagAction">
             <argument type="service" id="tag.repository" />
-            <tag name="flow.action" priority="600" key="action.create.tag"/>
+            <tag name="flow.action" priority="600" key="action.create.tag" />
+        </service>
+
+<!--        Register Flow event-->
+        <service id="Ihor\Flow\Core\Content\Subscriber\BusinessEventCollectorSubscriber">
+            <argument type="service" id="Shopware\Core\Framework\Event\BusinessEventCollector"/>
+            <tag name="kernel.event_subscriber"/>
         </service>
     </services>
 </container>
