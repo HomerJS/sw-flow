@@ -1,0 +1,10 @@
+{
+  "create-tag-action": {
+    "titleCreateTag": "Tag erstelen",
+    "labelTags": "Tagen",
+    "placeholderTags": "Tagen erstelen",
+    "buttonSaveAction": "Speichern",
+    "buttonAddAction": "Hinzufügen",
+    "descriptionTags": "Tagen: {tagen}"
+  }
+}

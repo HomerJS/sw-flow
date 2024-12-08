@@ -1,0 +1,10 @@
+{
+  "create-tag-action": {
+    "titleCreateTag": "Create tag",
+    "labelTags": "Tags",
+    "placeholderTags": "Enter tags",
+    "buttonSaveAction": "Save action",
+    "buttonAddAction": "Add action",
+    "descriptionTags": "Tags: {tags}"
+  }
+}

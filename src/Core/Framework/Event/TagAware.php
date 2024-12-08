@@ -3,7 +3,9 @@
 namespace Ihor\Flow\Core\Framework\Event;
 
 use Shopware\Core\Framework\Event\FlowEventAware;
+use Shopware\Core\Framework\Event\IsFlowEventAware;
 
+#[IsFlowEventAware]
 interface TagAware extends FlowEventAware
 {
     public const TAG = 'tag';

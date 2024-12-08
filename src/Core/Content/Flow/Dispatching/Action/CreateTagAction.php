@@ -24,9 +24,9 @@ class CreateTagAction extends FlowAction
 
     public function requirements(): array
     {
-        return []; //all events
+//        return []; //all events
 //        return [OrderAware::class, CustomerAware::class]; //events for order and customer
-//        return [TagAware::class]; //custom event
+        return [TagAware::class]; //custom event
     }
 
     public function handleFlow(StorableFlow $flow): void
